@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html
+  xmlns:th="http://www.thymeleaf.org"
+  th:replace="~{/user/layout/_form :: dynamic(
+            ~{::main},
+            ~{::#aside},
+            ~{::#material},
+            ~{::#breadcums}
+            )}"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+  </head>
+  <body>
+    <th:block id="breadcums">
+      <ul class="breadcrumb">
+        <li><a th:href="@{/index}">Trang chủ</a></li>
+        <li><a
+				th:href="@{/termCondition}">Điều Khoản & Quy Định</a></li>
+      </ul>
+    </th:block>
+
+    <th:block id="aside">
+      <div th:replace="/user/home/our_testimonial.html"></div>
+
+      <div th:replace="/user/home/newsletter.html"></div>
+
+      <div class="swiper-viewport">
+        <!--<div id="banner2" class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="#"
+                ><img
+                  src="/assets/user/image/cache/catalog/banners/banner-dung3.jpg"
+                  alt="Right Banner2"
+                  class="img-responsive"
+              /></a>
+            </div>
+          </div>
+        </div>-->
+      </div>
+    </th:block>
+
+    <main>
+      
+       
+        <div id="content" class="col-sm-9">
+            <h1>Thông tin</h1>
+            <div class="about-us clearfix shop-content">
+        <div class="col-sm-12">
+          <div class="cms-block">
+            <h4>Hình Thức Thanh Toán</h4>
+            <p>
+           </p>
+          </div>
+        </div>  
+        <!-- <div class="col-sm-6">
+          <img title="cms-img" src="https://opencart.mahardhi.com/MT05/ecart/02/image/catalog/about.jpg" alt="cms-img" class="img-responsive">
+        </div> -->
+      </div></div>
+          </div>
+      </div>
+      
+        
+      
+    </main>
+
+    <script>
+      $(document).ready(function () {
+        var headerfixed = 0;
+        if (headerfixed == 1) {
+          $(window).scroll(function () {
+            if ($(window).width() > 991) {
+              if ($(this).scrollTop() > 150) {
+                $(".header-bottom").addClass("header-fixed");
+              } else {
+                $(".header-bottom").removeClass("header-fixed");
+              }
+            } else {
+              $(".header-bottom").removeClass("header-fixed");
+            }
+          });
+        } else {
+          $(".header-bottom").removeClass("header-fixed");
+        }
+      });
+    </script>
+  </body>
+</html>

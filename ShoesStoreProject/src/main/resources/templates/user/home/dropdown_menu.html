@@ -1,0 +1,120 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+  <title>dropdown Menu</title>
+  <style>
+    :root {
+      --color-primary: #0073ff;
+      --color-white: #e9e9e9;
+      --color-black: #67a09a;
+      --color-black-1: #212b38;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: sans-serif;
+
+    }
+    .menu-bar {
+      background-color: var(--color-black);
+      height: 50px;
+      width: 100%;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      position: relative;
+      margin-left: 71px;
+      top: 5px;
+    }
+    .menu-bar ul {
+      list-style: none;
+      display: flex;
+    }
+    .menu-bar ul li {
+      /* width: 120px; */
+      padding: 15px 14px;
+      text-align: center;
+      position: relative;
+    }
+    .menu-bar ul li a {
+      font-size: 18px;
+      color: var(--color-white);
+      text-decoration: none;
+      transition: all 0.3s;
+      top: 20px;
+    }
+    .menu-bar ul li a:hover {
+      color: var(--color-primary);
+    }
+    .fas {
+      float: right;
+      margin-left: 10px;
+    }
+    /* dropdown menu style */
+    .dropdown-menu {
+      display: none;
+    }
+    .menu-bar ul li:hover .dropdown-menu {
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 100%;
+      background-color: var(--color-black);
+    }
+    .menu-bar ul li:hover .dropdown-menu ul {
+      display: block;
+      margin: 10px;
+    }
+    .menu-bar ul li:hover .dropdown-menu ul li {
+      width: 150px;
+      padding: 10px;
+    }
+
+  </style>
+</head>
+<body>
+<div class="menu-bar">
+  <ul>
+    <li><a href="#">Nam <i class="fas fa-caret-down"></i></a>
+      <div class="dropdown-menu">
+        <ul>
+          <li><a th:href="@{|/danh-sach/hunter-nam|}">Hunter</a>
+          <li><a th:href="@{|/danh-sach/sandal-nam|}">Sandal</a>
+          <li><a th:href="@{|/danh-sach/giaytay|}">Giày Tây</a>
+          <li><a th:href="@{|/danh-sach/dep-nam|}">Dép</a>
+        </ul>
+      </div>
+    </li>
+    <li><a href="#">Nữ<i class="fas fa-caret-down"></i></a>
+      <div class="dropdown-menu">
+        <ul>
+          <li><a th:href="@{|/danh-sach/hunter-nu|}">Hunter</a>
+          <li><a th:href="@{|/danh-sach/sandal-nu|}">Sandal</a>
+          <li><a th:href="@{|/danh-sach/giaycaogot|}">Giày Cao Gót</a>
+          <li><a th:href="@{|/danh-sach/dep-nu|}">Dép</a>
+        </ul>
+      </div>
+    </li>
+    <li><a href="#">Trẻ Em<i class="fas fa-caret-down"></i></a>
+      <div class="dropdown-menu">
+        <ul>
+          <li><a th:href="@{|/danh-sach/Sandal-treem|}">Sandal</a>
+          <li><a th:href="@{|/danh-sach/giaythethao-treem|}">Giày Thể Thao</a>
+          <li><a th:href="@{|/danh-sach/dep-treem|}">Dép</a>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</div>
+</body>
+</html>
+
+
+
+
+

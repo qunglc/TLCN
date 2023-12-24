@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clickable Squares in a Row</title>
+    <style>
+        .square-container {
+            display: flex;
+        }
+
+        .clickable-square {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px; /* Adjust the width for better spacing */
+            height: 30px; /* Adjust the height for better spacing */
+            background-color: lightgray;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .clickable-square.selected {
+            border: 0;
+            background-color: #67a09a;
+        }
+    </style>
+</head>
+<body>
+<h4 style="font-size: 14px; font-family: sans-serif">Kích thước: </h4>
+<div class="square-container">
+    <div id="39" class="clickable-square" onclick="selectSquare('39')">35</div>
+    <div id="40" class="clickable-square" onclick="selectSquare('40')">36</div>
+    <div id="41" class="clickable-square" onclick="selectSquare('41')">37</div>
+    <div id="42" class="clickable-square" onclick="selectSquare('42')">38</div>
+    <div id="43" class="clickable-square" onclick="selectSquare('43')">39</div>
+</div>
+
+<script>
+    function selectSquare(squareId) {
+        var allSquares = document.querySelectorAll('.clickable-square');
+
+        // Remove the 'selected' class from all squares
+        allSquares.forEach(function(square) {
+            square.classList.remove('selected');
+        });
+
+        var selectedSquare = document.getElementById(squareId);
+
+        // Add the 'selected' class to the clicked square
+        selectedSquare.classList.add('selected');
+
+        // Add your logic here to handle the selected state
+    }
+</script>
+
+</body>
+</html>

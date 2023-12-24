@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PayPal Transaction Form</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+            display: none;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            z-index: 1;
+        }
+
+        #myForm {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            margin-bottom: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 8px;
+        }
+
+        #paypalButton {
+            background-color: #003087; /* PayPal blue color */
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+
+<button id="paypalButton" onclick="showForm()">Buy with PayPal</button>
+<link href="/assets/images/logo/PayPal.png" rel="icon"/>
+<div class="background" id="background">
+    <form id="myForm">
+        <img id="paypalLogo" src="/assets/images/logo/PayPal.png" alt="PayPal Logo1">
+        <label for="itemName">Item Name:</label>
+        <input type="text" id="itemName" name="itemName" required>
+
+        <label for="itemPrice">Item Price:</label>
+        <input type="text" id="itemPrice" name="itemPrice" required>
+
+        <label for="buyerName">Your Name:</label>
+        <input type="text" id="buyerName" name="buyerName" required>
+
+        <label for="buyerEmail">Your Email:</label>
+        <input type="email" id="buyerEmail" name="buyerEmail" required>
+
+        <label for="cardNumber">Card Number:</label>
+        <input type="text" id="cardNumber" name="cardNumber" placeholder="**** **** **** ****" required>
+
+        <label for="expirationDate">Expiration Date:</label>
+        <input type="text" id="expirationDate" name="expirationDate" placeholder="MM/YY" required>
+
+        <label for="cvv">CVV:</label>
+        <input type="text" id="cvv" name="cvv" placeholder="123" required>
+
+        <input type="submit" value="Complete Purchase" id="paypalButton2">
+    </form>
+</div>
+
+<script>
+    function showForm() {
+        var background = document.getElementById('background');
+        background.style.display = 'flex';
+    }
+</script>
+
+</body>
+</html>

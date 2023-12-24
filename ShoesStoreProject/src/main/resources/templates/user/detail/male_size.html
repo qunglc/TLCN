@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+            width: auto; /* Set width to auto for dynamic sizing */
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        /* Apply responsive styles using media queries */
+        @media (max-width: 100px) {
+            th, td {
+                display: block; /* Make table cells stack on top of each other */
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            th {
+                text-align: center; /* Center-align header cells */
+            }
+        }
+    </style>
+</head>
+<body>
+<h4>Bảng size: </h4>
+<table>
+    <thead>
+    <tr>
+        <th style="width: 80px">Size</th>
+        <th style="width: 150px">Foot Length (mm)</th>
+        <th style="width: 150px">Min - Max (mm)</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>39</td>
+        <td>247</td>
+        <td>241 - 247</td>
+    </tr>
+    <tr>
+        <td>40</td>
+        <td>253</td>
+        <td>248 - 253</td>
+    </tr>
+    <tr>
+        <td>41</td>
+        <td>260</td>
+        <td>254 - 260</td>
+    </tr>
+    <tr>
+        <td>42</td>
+        <td>267</td>
+        <td>261 - 267</td>
+    </tr>
+    <tr>
+        <td>43</td>
+        <td>273</td>
+        <td>268 - 273</td>
+    </tr>
+    <!-- Add more rows as needed -->
+    </tbody>
+</table>
+</body>
+</html>

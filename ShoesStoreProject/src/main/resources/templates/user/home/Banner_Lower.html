@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <style>
+
+        .three-banner-home .bg-three-banner-home {
+            /*margin-top: -60px;*/
+            background: white;
+            position: relative;
+            z-index: 9;
+            padding: 0 30px;
+            border-radius: 4px; }
+        @media (max-width: 991px) {
+            .three-banner-home .bg-three-banner-home {
+                margin-top: 0;
+                background: white;
+                position: relative;
+                z-index: 9;
+                padding: 0;
+                border-radius: 0; } }
+        .three-banner-home .bg-three-banner-home .owl-item {
+            text-align: center; }
+        .three-banner-home .bg-three-banner-home .item-text-three-banner {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 16px;
+            width: fit-content;
+            display: inline-block; }
+        @media (max-width: 991px) {
+            .three-banner-home .bg-three-banner-home .item-text-three-banner {
+                font-size: 14px;
+                padding: 10px 0; } }
+        .three-banner-home .bg-three-banner-home .item-text-three-banner .item-text-three-banner-inner strong {
+            margin: 0 5px 0 0; }
+        @media (max-width: 991px) {
+            .three-banner-home .bg-three-banner-home .item-text-three-banner .item-text-three-banner-inner strong {
+                display: block;
+                width: 100%; } }
+        .three-banner-home .bg-three-banner-home .item-text-three-banner .item-text-three-banner-inner img {
+            margin: 0 8px 0 0; }
+        @media (max-width: 991px) {
+            .three-banner-home .bg-three-banner-home .item-text-three-banner .item-text-three-banner-inner img {
+                margin: 0 5px 0 0; } }
+
+        .three-banner-home .three-branner > div {
+            padding-right: 5px;
+            padding-left: 5px; }
+
+        @media (max-width: 991px) {
+            .three-banner-home .three-branner {
+                flex-wrap: inherit;
+                overflow: auto;
+                margin-right: -5px;
+                margin-left: -5px;
+                -ms-overflow-style: none;
+                scrollbar-width: none; }
+            .three-banner-home .three-branner::-webkit-scrollbar {
+                display: none; }
+            .three-banner-home .three-branner .col-10 {
+                padding: 0 5px; } }
+
+        .three-banner-home .three-branner a {
+            position: relative;
+            overflow: hidden;
+            display: block;
+            border-radius: 4px; }
+
+        .bannerEffect {
+            position: relative;
+            overflow: hidden;
+            display: block; }
+        .bannerEffect img {
+            transition: all 0.3s ease-in-out 0s;
+            -moz-transition: all 0.3s ease-in-out 0s;
+            -o-transition: all 0.3s ease-in-out 0s;
+            -webkit-transition: all 0.3s ease-in-out 0s;
+            -ms-transition: all 0.3s ease-in-out 0s; }
+        .bannerEffect:after {
+            content: "";
+            display: inline-block;
+            width: 150%;
+            height: 80%;
+            position: absolute;
+            right: 30%;
+            top: -75%;
+            background: rgba(255, 255, 255, 0.25);
+            transform: skewY(-50deg);
+            transition: all 0.5s ease 0s; }
+        .bannerEffect:hover:after {
+            right: -75%;
+            top: 120%;
+
+        }
+
+        .bannerEffect:hover img {
+            transform: scale(1.05); }
+
+        .mainBannerhome {
+            padding: 50px 0 30px 0;
+            background: url(https://file.hstatic.net/1000230642/file/bg_banner_center_e500361972e84b9c8cb5aa4950919c46.jpg);
+            background-position: center top; }
+        .mainBannerhome .section-head {
+            margin-bottom: 40px; }
+        .mainBannerhome .section-content a {
+            position: relative;
+            overflow: hidden;
+            display: block;
+            border-radius: 4px; }
+        .mainBannerhome .section-content a ~ a {
+            margin-top: 10px;
+            display: block; }
+        @media (max-width: 991px) {
+            .mainBannerhome .section-content a ~ a {
+                margin-top: 10px; } }
+        .mainBannerhome .section-content .mainBanner-left {
+            width: 25%;
+            padding: 0 5px; }
+        @media (max-width: 991px) {
+            .mainBannerhome .section-content .mainBanner-left {
+                padding: 0 5px; } }
+        .mainBannerhome .section-content .mainBanner-center {
+            width: 50%;
+            padding: 0 5px; }
+        @media (max-width: 991px) {
+            .mainBannerhome .section-content .mainBanner-center {
+                padding: 0 5px; } }
+        .mainBannerhome .section-content .mainBanner-right {
+            width: 25%;
+            padding: 0 5px; }
+        @media (max-width: 991px) {
+            .mainBannerhome .section-content .mainBanner-right {
+                padding: 0 5px; } }
+        .mainBannerhome .img_style-three .mainBanner-left, .mainBannerhome .img_style-three .mainBanner-right {
+            width: calc(25% - 5px); }
+        @media (max-width: 991px) {
+            .mainBannerhome .img_style-three .mainBanner-left, .mainBannerhome .img_style-three .mainBanner-right {
+                width: 25%; } }
+        @media (max-width: 767px) {
+            .mainBannerhome .img_style-three .mainBanner-center {
+                width: calc(50% - 5px); } }
+        @media (max-width: 767px) {
+            .mainBannerhome .col-12 {
+                margin-bottom: 15px; } }
+
+        .product-loop .proloop-image .gift.product_gift_label .lazyload,
+        .product-loop-ldpage .gift.product_gift_label .lazyload {
+            min-height: 25px; }
+    </style>
+
+</head>
+
+
+<body>
+
+<section class="mainBannerhome section-home">
+    <div class="container">
+        <div class="bg-three-banner-home">
+            <div class="row three-branner">
+                <div class="col-12 col-sm-4">
+                    <a class="bannerEffect">
+                        <img class="lazyload dt-width-100" width="380" height="175" src="/assets/user/image/catalog/banners/banner1.png" alt="">
+                    </a>
+                </div>
+                <div class="col-12 col-sm-4">
+                    <a class="bannerEffect">
+                        <img class="lazyload dt-width-100" width="380" height="175" src="/assets/user/image/catalog/banners/banner2.png" alt="">
+                    </a>
+                </div>
+                <div class="col-12 col-sm-4">
+                    <a class="bannerEffect">
+                        <img class="lazyload dt-width-100" width="380" height="175" src="/assets/user/image/catalog/banners/banner3.png" alt="">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

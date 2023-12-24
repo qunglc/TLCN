@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{/user/layout/_form :: dynamic(
+            ~{::main},
+            ~{::#aside},
+            ~{::#material},
+            ~{::#breadcums}
+            )}">
+<head>
+<meta charset="UTF-8" />
+<title></title>
+</head>
+<body>
+	<th:block id="breadcums">
+		<ul class="breadcrumb">
+			<li><a th:href="@{/index}">Trang chủ</a></li>
+			<li><a th:href="@{/aboutUs}">Về chúng tôi</a></li>
+		</ul>
+	</th:block>
+
+	<th:block id="aside">
+		<div th:replace="/user/home/our_testimonial.html"></div>
+		<!--<div class="swiper-viewport">
+			<div id="banner0" class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<a href="#"><img
+							src="/assets/user/image/cache/catalog/banners/banner-dung1.jpg"
+							alt="Left Banner" class="img-responsive" /></a>
+					</div>
+				</div>
+			</div>
+		</div>-->
+
+		<div th:replace="/user/home/special_product.html"></div>
+
+		<div th:replace="/user/home/newsletter.html"></div>
+
+		<!--<div class="swiper-viewport">
+			<div id="banner2" class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<a href="#"><img
+							src="/assets/user/image/cache/catalog/banners/banner-dung3.jpg"
+							alt="Right Banner2" class="img-responsive" /></a>
+					</div>
+				</div>
+			</div>
+		</div>-->
+	</th:block>
+
+	<main>
+
+
+		<div id="content" class="col-sm-9">
+			<h1>Về Shoetopia</h1>
+			<div class="about-us clearfix shop-content">
+				<div class="col-sm-6">
+					<div class="cms-block">
+						<h4>NHỮNG BƯỚC CHÂN KHÔNG MỎI</h4>
+						<p>
+							Từ một cơ sở sản xuất nhỏ khởi nghiệp từ năm 1982 chỉ với 20 công nhân nhưng có sự quyết tâm cao độ, ý chí và luôn tự khiêm tốn để cải cách tiến lên, Biti's đã trải qua giai đoạn của nền kinh tế bao cấp với nhiều khó khăn để khẳng định vị trí của mình.
+							Hơn một phần ba thế kỉ trôi qua, như một "bước chân không mỏi", Biti's đã cải tiến và đổi mới không ngừng, từng bước xây dựng cho mình một thương hiệu giày dép rất đa dạng về hình thức và mẫu mã, cùng với đó là chiến lược sản xuất và xuất nhập khẩu mang tầm thời đại, nguồn vật lực - tài lực - nhân lực năng động, nhiệt huyết, đủ sức để cạnh tranh với các thương hiệu lớn trên thế giới.
+						</p>
+					</div>
+				</div>
+
+				<div class="col-sm-6">
+					<img title="cms-img" th:src="@{/assets/images/banner/about.jpg}"
+						alt="cms-img" class="img-responsive">
+				</div>
+				<div class="col-sm-6">
+					<img title="cms-img" th:src="@{/assets/images/banner/about2.png}"
+						 alt="cms-img" class="img-responsive">
+				</div>
+				<div class="col-sm-6">
+					<div class="cms-block">
+						<h4>BITI'S BƯỚC RA THẾ GIỚI</h4>
+						<p>
+							Giờ đây, Biti's đã lớn mạnh và phát triển đi lên cùng đất nước, không chỉ trở thành một thương hiệu uy tín trong nước mà còn tiên phong xuất khẩu ra thị trường thế giới. Biti's đã đánh dấu thương hiệu tại 40 nước trên thế giới, trong đó phải nói đến các thị trường khó tính như: Ý, Pháp, Anh, Mỹ, Nga, Nhật, Nam Mỹ, Trung Quốc, Mêxicô....
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</main>
+</body>
+</html>

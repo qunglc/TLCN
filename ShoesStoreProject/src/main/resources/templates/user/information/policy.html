@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html
+  xmlns:th="http://www.thymeleaf.org"
+  th:replace="~{/user/layout/_form :: dynamic(
+            ~{::main},
+            ~{::#aside},
+            ~{::#material},
+            ~{::#breadcums}
+            )}"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+  </head>
+  <body>
+    <th:block id="breadcums">
+      <ul class="breadcrumb">
+        <li><a th:href="@{/index}">Trang chủ</a></li>
+        <li><a
+				th:href="@{/policy}">Chính sách</a></li>
+      </ul>
+    </th:block>
+
+    <th:block id="aside">
+      <div th:replace="/user/home/our_testimonial.html"></div>
+      <!--<div class="swiper-viewport">
+        <div id="banner0" class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="#"
+                ><img
+                  src="/assets/user/image/cache/catalog/banners/banner-dung1.jpg"
+                  alt="Left Banner"
+                  class="img-responsive"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>-->
+
+      <div th:replace="/user/home/newsletter.html"></div>
+
+      <!--<div class="swiper-viewport">
+        <div id="banner2" class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="#"
+                ><img
+                  src="/assets/user/image/cache/catalog/banners/banner-dung3.jpg"
+                  alt="Right Banner2"
+                  class="img-responsive"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>-->
+    </th:block>
+
+    <main>
+      
+       
+        <div id="content" class="col-sm-9">
+            <h1>Thông tin</h1>
+            <div class="about-us clearfix shop-content">
+        <div class="col-sm-12">
+          <div class="cms-block">
+            <h4>Chính sách bảo hành</h4>
+            <p>
+                <Strong>1. Điều kiện áp dụng và thời gian bảo hành:</Strong><br>
+                <strong>Điều kiện áp dụng:</strong><br>
+                &#8226; Trong thời gian bảo hành Khách hàng có nhu cầu bảo hành sản phẩm thì sẽ miễn phí bảo hành với các trường hợp sau: Hở keo, dứt chỉ, gãy móc khoá, bung hoạ tiết trang trí (nơ, nút, hoa, …), lờn gai nỉ.<br>
+
+                &#8226; Nếu quá thời gian bảo hành Khách hàng có nhu cầu bảo hành sản phẩm thì sẽ tính phí bảo hành + phí vận chuyển (nếu có) với các trường hợp sau: Mòn hay mất tẩy cao su chi tiết rời, gãy khoen khoá, bung hoạ tiết trang trí (nơ, nút, hoa, …), lờn gai nỉ.<br>
+
+                &#8226; Khi bảo hành khách hàng phải cung cấp hóa đơn (phiếu xuất hàng) hoặc mail xác nhận giao hàng và phiếu bảo hành của sản phẩm.<br>
+                &#8226; Thời gian xử lý bảo hành: Từ 1 đến 15 ngày làm việc kể từ ngày nhà máy nhận được sản phẩm tùy mức độ hư hỏng.<br>
+                &#8226; Không hỗ trợ đối với những sản phẩm có thông báo: không áp dụng đổi trả - bảo hành.<br>
+                <strong>2. Địa điểm tiếp nhận bảo hành:</strong><br>
+
+                Tại tất cả các cửa hàng tiếp thị của Biti’s trên toàn quốc. Danh sách cửa hàng tiếp thị tại đây.<br>
+                <strong>Lưu ý:</strong><br>
+                &#8226; Trường hợp hết thời gian bảo hành, giày dép hư hỏng do hao mòn tự nhiên hoặc bị tác động mạnh từ bên ngoài CHTT tiếp nhận bảo hành tuy nhiên chi phí sửa chữa và vận chuyển khách hàng thanh toán.<br>
+                &#8226; Hàng chậm, xu hướng chậm không được bảo hành.<br>
+            </p>
+          </div>
+        </div>
+            </div>
+        </div>
+        
+      
+    </main>
+
+    <script>
+      $(document).ready(function () {
+        var headerfixed = 0;
+        if (headerfixed == 1) {
+          $(window).scroll(function () {
+            if ($(window).width() > 991) {
+              if ($(this).scrollTop() > 150) {
+                $(".header-bottom").addClass("header-fixed");
+              } else {
+                $(".header-bottom").removeClass("header-fixed");
+              }
+            } else {
+              $(".header-bottom").removeClass("header-fixed");
+            }
+          });
+        } else {
+          $(".header-bottom").removeClass("header-fixed");
+        }
+      });
+    </script>
+  </body>
+</html>
