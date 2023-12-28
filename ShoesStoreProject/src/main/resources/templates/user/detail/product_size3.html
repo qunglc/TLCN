@@ -34,7 +34,7 @@
 <h4 style="font-size: 14px; font-family: sans-serif">Kích thước: </h4>
 
 <div class="square-container">
-    <div id="39" class="clickable-square" onclick="selectSquare('39')">22</div>
+    <div id="39" class="clickable-square selected" onclick="selectSquare('39')">22</div>
     <div id="40" class="clickable-square" onclick="selectSquare('40')">23</div>
     <div id="41" class="clickable-square" onclick="selectSquare('41')">24</div>
     <div id="42" class="clickable-square" onclick="selectSquare('42')">25</div>
@@ -50,25 +50,24 @@
 </div>
 
 <script>
-    var selectedSquareId = null;
-
     function selectSquare(squareId) {
-        // If a square is already selected, remove the 'selected' class
-        if (selectedSquareId !== null) {
-            var previousSelectedSquare = document.getElementById(selectedSquareId);
-            previousSelectedSquare.classList.remove('selected');
-        }
+        var selectedSquare = document.getElementById(squareId);
 
-        var currentSelectedSquare = document.getElementById(squareId);
+        // Set the background color of the clicked square
+        selectedSquare.style.backgroundColor = '#67a09a';
+
+        // Remove the 'selected' class from all squares
+        document.querySelectorAll('.clickable-square').forEach(function(square) {
+            if (square.id !== squareId) {
+                square.classList.remove('selected');
+                square.style.backgroundColor = '#f2f2f2';
+            }
+        });
 
         // Add the 'selected' class to the clicked square
-        currentSelectedSquare.classList.add('selected');
-
-        // Update the selectedSquareId variable
-        selectedSquareId = squareId;
+        selectedSquare.classList.add('selected');
 
         // Add your logic here to handle the selected state
-        console.log('Selected square:', squareId);
     }
 </script>
 </body>

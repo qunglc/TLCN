@@ -9,6 +9,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Index</title>
+
 </head>
 <body>
 	<th:block id="breadcums">
@@ -72,6 +73,7 @@
 								<td class="text-left">Tên Sản Phẩm</td>
 								<td class="text-left">Mã Sản Phẩm</td>
 								<td class="text-right">Số Lượng</td>
+								<td class="text-right">Kích Thước</td>
 								<td class="text-right">Giá</td>
 								<td class="text-right">Tổng Tiền</td>
 							</tr>
@@ -86,6 +88,9 @@
 									<td class="text-left">[[${item.product.name}]]</td>
 									<td class="text-left">[[${item.product.code}]]</td>
 									<td class="text-right">[[${item.quality}]]</td>
+									<td class="text-right" th:if="${#strings.contains(item.product.code, 'NAM')}" th:text="43"></td>
+									<td class="text-right" th:if="${#strings.contains(item.product.code, 'NU')}" th:text="37"></td>
+									<td class="text-right" th:if="${#strings.contains(item.product.code, 'TRE')}" th:text="26"></td>
 									<td class="text-right">[[${#numbers.formatInteger(item.product.price,3,'POINT')}]]</td>
 									<td class="text-right">[[${#numbers.formatInteger(item.product.price
 										* item.quality,3,'POINT')}]]</td>
@@ -96,26 +101,26 @@
 						<tfoot>
 
 							<tr>
-								<td colspan="4"></td>
+								<td colspan="5"></td>
 								<td class="text-right"><b>Tạm Tính</b></td>
 								<td class="text-right">[[${#numbers.formatInteger(total,3,'POINT')}]]</td>
 								<!-- <td></td> -->
 							</tr>
 							<tr>
-								<td colspan="4"></td>
+								<td colspan="5"></td>
 								<td class="text-right"><b>Tiền Vận Chuyển</b></td>
 								<td class="text-right">50.000</td>
 								<!-- <td></td> -->
 							</tr>
 							<tr>
-								<td colspan="4"></td>
+								<td colspan="5"></td>
 								<td class="text-right"><b>Tiền Giảm Giá</b></td>
 								<td class="text-right"><th:block th:if="${discount != 0}">[[${#numbers.formatInteger(discount,3,'POINT')}]]</th:block>
 									<th:block th:if="${discount == 0}">0</th:block></td>
 								<!-- <td></td> -->
 							</tr>
 							<tr>
-								<td colspan="4"></td>
+								<td colspan="5"></td>
 								<td class="text-right"><b>Tổng</b></td>
 								<td class="text-right">[[${#numbers.formatInteger(total+50000-discount,3,'POINT')}]]</td>
 								<!-- <td></td> -->

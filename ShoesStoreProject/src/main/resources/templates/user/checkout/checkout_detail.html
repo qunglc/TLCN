@@ -214,6 +214,7 @@
 									<td class="text-left">Tên Sản Phẩm</td>
 									<td class="text-left">Mã Số</td>
 									<td class="text-right">Số Lượng</td>
+									<td class="text-right">Kích Thước</td>
 									<td class="text-right">Giá</td>
 									<td class="text-right">Tổng</td>
 								</tr>
@@ -223,6 +224,9 @@
 									<td class="text-left"><a href="">[[${item.product.name}]]</a></td>
 									<td class="text-left">[[${item.product.code}]]</td>
 									<td class="text-right">[[${item.quality}]]</td>
+									<td class="text-right" th:if="${#strings.contains(item.product.code, 'NAM')}" th:text="43"></td>
+									<td class="text-right" th:if="${#strings.contains(item.product.code, 'NU')}" th:text="37"></td>
+									<td class="text-right" th:if="${#strings.contains(item.product.code, 'TRE')}" th:text="26"></td>
 									<td class="text-right">[[${#numbers.formatInteger(item.product.price,3,'POINT')}]]</td>
 									<td class="text-right">[[${#numbers.formatInteger(item.product.price
 										* item.quality,3,'POINT')}]]</td>
@@ -230,22 +234,22 @@
 							</tbody>
 							<tfoot>
 								<tr>
-									<td colspan="4" class="text-right cart-total-title">Tạm
+									<td colspan="5" class="text-right cart-total-title">Tạm
 										Tính:</td>
 									<td class="text-right cart-total-price">[[${#numbers.formatInteger(total,total==0?0:3,'POINT')}]]</td>
 								</tr>
 								<tr>
-									<td colspan="4" class="text-right cart-total-title">Phí
+									<td colspan="5" class="text-right cart-total-title">Phí
 										Vận Chuyển:</td>
 									<td class="text-right cart-total-price">50.000</td>
 								</tr>
 								<tr>
-									<td colspan="4" class="text-right cart-total-title">Mã
+									<td colspan="5" class="text-right cart-total-title">Mã
 										Giảm Giá:</td>
 									<td class="text-right cart-total-price">[[${#numbers.formatInteger(cart.discount.price,cart.discount.price==0?0:3,'POINT')}]]</td>
 								</tr>
 								<tr>
-									<td colspan="4" class="text-right cart-total-title">Tổng
+									<td colspan="5" class="text-right cart-total-title">Tổng
 										Tiền:</td>
 									<td class="text-right cart-total-price">[[${#numbers.formatInteger(cart.amount
 										+ 50000,cart.amount==0?0:3,'POINT')}]]</td>

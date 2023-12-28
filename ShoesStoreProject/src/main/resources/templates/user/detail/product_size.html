@@ -15,7 +15,7 @@
             justify-content: center;
             width: 50px; /* Adjust the width for better spacing */
             height: 30px; /* Adjust the height for better spacing */
-            background-color: lightgray;
+            background-color: #f2f2f2;
             margin: 5px;
             cursor: pointer;
             border-radius: 5px;
@@ -30,23 +30,29 @@
 <body>
 <h4 style="font-size: 14px; font-family: sans-serif">Kích thước: </h4>
 <div class="square-container">
-    <div id="39" class="clickable-square" onclick="selectSquare('39')">39</div>
+    <div id="39" class="clickable-square selected" onclick="selectSquare('39')">39</div>
     <div id="40" class="clickable-square" onclick="selectSquare('40')">40</div>
     <div id="41" class="clickable-square" onclick="selectSquare('41')">41</div>
     <div id="42" class="clickable-square" onclick="selectSquare('42')">42</div>
     <div id="43" class="clickable-square" onclick="selectSquare('43')">43</div>
+    <div id="44" class="clickable-square" onclick="selectSquare('44')">44</div>
+    <div id="45" class="clickable-square" onclick="selectSquare('45')">45</div>
 </div>
 
 <script>
     function selectSquare(squareId) {
-        var allSquares = document.querySelectorAll('.clickable-square');
+        var selectedSquare = document.getElementById(squareId);
+
+        // Set the background color of the clicked square
+        selectedSquare.style.backgroundColor = '#67a09a';
 
         // Remove the 'selected' class from all squares
-        allSquares.forEach(function(square) {
-            square.classList.remove('selected');
+        document.querySelectorAll('.clickable-square').forEach(function(square) {
+            if (square.id !== squareId) {
+                square.classList.remove('selected');
+                square.style.backgroundColor = '#f2f2f2';
+            }
         });
-
-        var selectedSquare = document.getElementById(squareId);
 
         // Add the 'selected' class to the clicked square
         selectedSquare.classList.add('selected');
