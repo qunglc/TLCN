@@ -1,5 +1,5 @@
 # Project Tiểu Luận Chuyên Ngành
-## Tên đề tài: Xây dựng website bán sách với Java Spring Boot
+## Tên đề tài: Xây dựng website bán giày với Java Spring Boot
 ## Nhóm:
 1. Phạm Nguyễn Quang Lộc - 19110393
 2. Trần Thái Nguyên - 19110412
